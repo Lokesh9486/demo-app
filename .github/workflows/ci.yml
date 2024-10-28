@@ -23,7 +23,9 @@ jobs:
         run: npm install
 
       - name: Run tests
+        continue-on-error: false
         run: npm run test -- --ci --coverage
 
       - name: Build
+        continue-on-error: false
         run: npm run build
